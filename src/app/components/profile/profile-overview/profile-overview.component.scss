@@ -1,0 +1,109 @@
+.container {
+
+  .pre-header-image {
+    position: relative;
+
+    img {
+      height: 180px;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .main-content {
+    margin: -20px 0 0;
+    background-color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    position: relative;
+    padding: 15px 0 0;
+    .header-info {
+      display: flex;
+      margin: 5px;
+      .pfp {
+        margin-left: 20px;
+
+        img {
+          width: 100px;
+          aspect-ratio: 1/1;
+          border-radius: 100px;
+        }
+      }
+
+      .basic-info {
+        text-align: right;
+        width: 100%;
+        margin-right: 20px;
+        font-size: 20px;
+
+        p.name {
+          font-weight: 600;
+        }
+        p {
+          margin: 5px 0;
+        }
+
+        p.member-info {
+          font-size: 15px;
+        }
+      }
+    }
+
+    .profile-description {
+      width: 100%;
+      margin: 10px;
+      font-size: 15px;
+      .description {
+        font-weight: 600;
+      }
+      .description-content {
+        font-style: italic;
+        font-weight: 300;
+      }
+    }
+
+    .profile-list {
+      display: flex;
+      flex-direction: column;
+      a {
+        text-decoration: none;
+        color: black;
+
+        .profile-list-entry {
+          display: flex;
+          flex-direction: row;
+          padding-left: 10px;
+          border-bottom: 1px solid #cccccc;
+          .icon, .click-icon {
+            margin: auto;
+            img {
+              width: 40px;
+              aspect-ratio: 1/1;
+              object-fit: cover;
+            }
+          }
+
+          .click-icon {
+            margin-right: 10px;
+            img {
+              width: 31px;
+            }
+          }
+          .text {
+            width: 100%;
+            margin: auto 10px 0;
+            p {
+              font-size: 17px;
+            }
+          }
+        }
+      }
+      a:first-child {
+        .profile-list-entry {
+          border-top: 1px solid #cecece;
+        }
+
+      }
+    }
+  }
+}

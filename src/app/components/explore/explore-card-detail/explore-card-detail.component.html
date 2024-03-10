@@ -2,12 +2,26 @@
     <div class="top-image">
       <img src="{{this.exploreItem.image}}" alt="{{this.exploreItem.title}}">
     </div>
-    <div class="container-info">
-      <a [routerLink]="['/explore', ExploreCategory.getIndex(this.exploreItem.category)]">← Return to {{exploreItem.category.title}}</a>
-      <h2>{{this.exploreItem.title}}</h2>
-      <p>{{this.exploreItem.category.description}}</p>
+    <div class="container-header">
+      <div class="container-info">
+        <a [routerLink]="['/explore', ExploreCategory.getIndex(this.exploreItem.category)]">← Return to {{exploreItem.category.title}}</a>
+        <h2>{{this.exploreItem.title}}</h2>
+        <p>{{this.exploreItem.getDistanceString() }}</p>
+      </div>
+      <div class="bookmark" (click)="toggleBookmark()">
+        @if (user.isBookmarked(itemId)) {
+          <img src="assets/bookmark-fill-svgrepo-com.svg">
+        } @else {
+          <img src="assets/bookmark-svgrepo-com.svg">
+        }
+      </div>
     </div>
     <div class="item-list">
+      <p class="cont-header">Description</p>
+      <div class="description">
+        <p class="desc-content">{{this.exploreItem.description}}</p>
+      </div>
+      <p class="cont-header">Directions</p>
     </div>
   </div>
 

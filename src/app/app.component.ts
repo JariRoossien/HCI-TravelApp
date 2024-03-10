@@ -13,5 +13,4 @@ import {UserHeaderComponent} from "./components/header/user-header/user-header.c
 })
 export class AppComponent {
   title = 'HCI-TravelApp';
-  currentView: AppViewEnum = AppViewEnum.EXPLORE;
 }

@@ -16,7 +16,7 @@ export class ExploreCardComponent {
   @Input() exploreCard: ExploreItem;
 
   constructor() {
-    this.exploreCard = new ExploreItem(0, "", "", 0, 0, ExploreCategory.attractions);
+    this.exploreCard = new ExploreItem(0, "", "", "", 0, 0, ExploreCategory.attractions);
   }
 
   getDistance(): string {

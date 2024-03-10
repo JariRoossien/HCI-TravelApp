@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import {ExploreCardComponent} from "../explore-card/explore-card.component";
 import {ExploreItem} from "../../../entity/explore-item";
 import {ExploreCategory} from "../../../enums/explore-category";
-import {ExploreItemService} from "../../../services/explore-item.service";
+import {ExploreItemService} from "../../../services/explore-items/explore-item.service";
 import {RouterLink} from "@angular/router";
 
 @Component({
