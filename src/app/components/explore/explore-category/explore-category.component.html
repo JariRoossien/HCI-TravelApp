@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="top-image">
+    <img src="{{this.category.url}}" alt="{{this.category.title}}">
+  </div>
+  <div class="container-info">
+    <a [routerLink]="['/explore']">← Return to categories</a>
+    <h2>{{this.category.title}}</h2>
+    <p>{{this.category.description}}</p>
+  </div>
+  <div class="item-list">
+    @for (card of categoryItems; track card) {
+      <app-explore-category-item [exploreCard]="card"></app-explore-category-item>
+    }
+  </div>
+</div>

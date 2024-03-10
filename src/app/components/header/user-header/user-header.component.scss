@@ -1,0 +1,27 @@
+.header-content {
+  background-color: #ffffff;
+  box-shadow: 0px 3px 9px 3px rgba(0,0,0,0.15);
+  border-radius: 5px;
+}
+
+.info-row {
+  width: 100%;
+  display: flex;
+
+  .icon-container {
+    display: flex;
+    img {
+      width: 20px;
+      margin: 8px;
+    }
+  }
+
+  .text-header {
+    color: #000000;
+    font-weight: 400;
+    margin: auto 10px auto 10px;
+    width: 100%;
+  }
+
+}
+

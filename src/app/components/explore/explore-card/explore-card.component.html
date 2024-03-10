@@ -1,0 +1,11 @@
+<a [routerLink]="['/explore', 'detail', exploreCard.id]">
+  <div class="c-attraction">
+    <img src="{{exploreCard.image}}">
+    <p class="c-attraction-title">{{ exploreCard.title}}</p>
+    <div class="c-attraction-data-wrapper">
+      <p class="c-attraction-distance">{{getDistance()}}</p>
+      <p class="c-attraction-xp">+{{exploreCard.xp}} xp</p>
+    </div>
+  </div>
+
+</a>

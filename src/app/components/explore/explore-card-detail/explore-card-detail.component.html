@@ -1,0 +1,13 @@
+  <div class="container">
+    <div class="top-image">
+      <img src="{{this.exploreItem.image}}" alt="{{this.exploreItem.title}}">
+    </div>
+    <div class="container-info">
+      <a [routerLink]="['/explore', ExploreCategory.getIndex(this.exploreItem.category)]">← Return to {{exploreItem.category.title}}</a>
+      <h2>{{this.exploreItem.title}}</h2>
+      <p>{{this.exploreItem.category.description}}</p>
+    </div>
+    <div class="item-list">
+    </div>
+  </div>
+

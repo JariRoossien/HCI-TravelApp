@@ -1,0 +1,56 @@
+a {
+  text-decoration: none;
+  color: black;
+}
+.explore-item {
+  margin: 0;
+  border-bottom: 1px solid black;
+  padding: 5px;
+  display: flex;
+  .left-side {
+    img {
+      width: 130px;
+      aspect-ratio: 15/10;
+      object-fit: cover;
+      margin-top: 5px;
+    }
+  }
+  .right-side {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 5px;
+
+    p {
+      margin: 0;
+    }
+    .title {
+      font-weight: 600;
+    }
+    .description {
+      height: 100%;
+      font-weight: 300;
+      max-width: 100%;
+      overflow: hidden;
+      max-height: 40px;
+      margin-bottom: 10px;
+    }
+
+    .extra-info {
+      display: flex;
+      width: 100%;
+      .distance {
+        color: #595959;
+        font-weight: 200;
+        width: 50%;
+      }
+      .xp {
+        text-align: right;
+        width: 50%;
+        margin-right: 5px;
+        color: black;
+        font-weight: 700;
+      }
+    }
+  }
+}

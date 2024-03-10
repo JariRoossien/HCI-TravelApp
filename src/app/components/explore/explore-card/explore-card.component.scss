@@ -1,0 +1,41 @@
+a {
+  text-decoration: none;
+  color: black;
+}
+.c-attraction {
+
+  text-align: left;
+  width: 150px;
+  border-radius: 10px;
+  p {
+    margin: 5px
+  }
+
+  img {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .c-attraction-title {
+    font-weight: 600;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .c-attraction-data-wrapper {
+    display: flex;
+    justify-content: space-between;
+    .c-attraction-distance {
+      font-weight: 300;
+      font-size: 10px;
+    }
+    .c-attraction-xp {
+      text-align: right;
+      font-weight: 700;
+      font-size: 10px;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+<div class="main-content">
+  <div class="close-attraction-container">
+    <h2>Explore Close By</h2>
+    <p>Local Attractions right around the corner!</p>
+    <div class="close-attractions">
+      @for (card of this.nearbyCards; track card) {
+        <app-explore-card [exploreCard]="card"></app-explore-card>
+      }
+    </div>
+  </div>
+
+  <div class="close-attraction-container">
+    <h2>Choose a category</h2>
+    <p>Looking for the next hidden gem, or just trying to find some food?</p>
+    <div class="category-grid">
+      @for (value of ExploreCategory.values(); track value) {
+        <a [routerLink]="['/explore',ExploreCategory.getIndex(value)]">
+          <div class="category-box">
+            <img src="{{value.url}}" alt="{{value.title}}">
+            <p>{{ value.title }}</p>
+          </div>
+        </a>
+      }
+    </div>
+  </div>
+
+</div>
