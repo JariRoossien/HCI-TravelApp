@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router, RouterLink} from "@angular/router";
 import {ExploreItemService} from "../../../services/explore-items/explore-item.service";
 import {ExploreCategory} from "../../../enums/explore-category";
@@ -17,11 +17,13 @@ import {TravelUser} from "../../../entity/travel-user";
   templateUrl: './explore-card-detail.component.html',
   styleUrl: './explore-card-detail.component.scss'
 })
-export class ExploreCardDetailComponent {
+export class ExploreCardDetailComponent implements OnInit {
 
   exploreItem: ExploreItem;
   user: TravelUser;
   itemId: number;
+  isCompleted: boolean;
+
   constructor(route: ActivatedRoute, itemService: ExploreItemService, userService: UserService, router: Router) {
     this.itemId = parseInt(route.snapshot.paramMap.get("itemId") || "0");
     const itemFound = itemService.getItemFromId(this.itemId);
@@ -30,11 +32,23 @@ export class ExploreCardDetailComponent {
     }
     this.exploreItem = itemFound || new ExploreItem(0, "", "", "", 0, 0, ExploreCategory.museums);
     this.user = userService.travelUser;
+    this.isCompleted = false;
   }
+
+  ngOnInit(): void {
+        this.isCompleted = false;
+    }
 
   protected readonly ExploreCategory = ExploreCategory;
 
   toggleBookmark() {
     this.user.toggleBookmark(this.itemId);
+  }
+
+  protected readonly alert = alert;
+
+  completeVisit() : void {
+    this.user.addVisited(this.itemId);
+    this.isCompleted = true;
   }
 }

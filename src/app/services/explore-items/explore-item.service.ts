@@ -14,14 +14,15 @@ export class ExploreItemService {
     this.exploreItems.push(new ExploreItem(idCounter++,
       "https://images.adsttc.com/media/images/55e6/f619/e58e/ce03/1300/0374/large_jpg/PORTADA_06_VanGoghMuseum_EntranceBuilding_HansvanHeeswijkArchitects_photo_RonaldTilleman.jpg?1441199623",
       "Van Gogh Museum",
-      `Explore the world's largest collection of works by Vincent van Gogh and other renowned artists.`,      200,
+      `Explore the world's largest collection of works by Vincent van Gogh and other renowned artists.`,
+      50,
       15,
       ExploreCategory.museums
     ));
     this.exploreItems.push(new ExploreItem(idCounter++,
         "https://cdn.museum.nl/assets/c1da6f0c-7718-4a4e-af2e-d28bc36e8b46?w=3000&c=e1debc3372c1e6d198e1fd7d3603296d039f48f473b9f4a20971174ecefd95cc",
         "Rijksmuseum",
-      `Discover Dutch art and history from the Middle Ages to the present day in this iconic museum.`,      300,
+      `Discover Dutch art and history from the Middle Ages to the present day in this iconic museum.`,      80,
         20, ExploreCategory.museums));
     this.exploreItems.push(new ExploreItem(idCounter++,
         "https://img.freepik.com/premium-photo/photo-closeup-shot-delicious-food_829042-89.jpg",
@@ -126,5 +127,9 @@ export class ExploreItemService {
 
   getVisitedAttractions(visitedIds: number[]): ExploreItem[] {
     return this.exploreItems.filter(a => visitedIds.indexOf(a.id) >= 0);
+  }
+
+  getBookmarked(bookmarks: number[]): ExploreItem[] {
+    return this.exploreItems.filter(a => bookmarks.indexOf(a.id) >= 0);
   }
 }

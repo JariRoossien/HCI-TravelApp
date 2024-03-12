@@ -59,6 +59,36 @@
     .description {
       margin-bottom: 20px;
     }
+
+    .dir-description {
+      font-weight: 300;
+      font-style: italic;
+    }
+    img {
+      aspect-ratio: 16/10;
+      width: calc(100% - 20px);
+      margin: 10px;
+      object-fit: cover;
+      border-radius: 15px;
+    }
+
+    button {
+      background-color: #28a745;
+      border-color: #28a745;
+      color: white;
+      width: 100%;
+      display: block;
+      font-size: 20px;
+      font-family: "Montserrat", sans-serif;
+      padding: 10px;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .visit-info {
+      font-style: italic;
+      margin-bottom: 10px;
+    }
   }
 
   .top-image {

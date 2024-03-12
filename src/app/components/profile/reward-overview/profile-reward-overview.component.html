@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="top-image">
+    <img src="assets/catalina-fedorova-RRl_m_fQzNY-unsplash.jpg" alt="">
+  </div>
+  <div class="container-info">
+    <h2>Visited Locations</h2>
+    <p>Look back at all the places you have unlocked!</p>
+  </div>
+  <div class="item-list">
+    @if(rewardItems.length == 0) {
+      <p>You haven't visited any locations yet! Go to Explore and find some exciting places to visit!</p>
+    } @else {
+      @for (card of rewardItems; track card) {
+        <app-reward-list-item [rewardItem]="card"></app-reward-list-item>
+      }
+    }
+  </div>
+</div>

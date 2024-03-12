@@ -3,13 +3,17 @@ import {ExploreItemService} from "../../../services/explore-items/explore-item.s
 import {ExploreItem} from "../../../entity/explore-item";
 import {ExploreCardComponent} from "../../explore/explore-card/explore-card.component";
 import {RouterLink} from "@angular/router";
+import {RewardService} from "../../../services/rewards/reward.service";
+import {RewardItem} from "../../../entity/reward-item";
+import {MainRewardCardComponent} from "../main-reward-card/main-reward-card.component";
 
 @Component({
   selector: 'app-main-overview',
   standalone: true,
   imports: [
     ExploreCardComponent,
-    RouterLink
+    RouterLink,
+    MainRewardCardComponent
   ],
   templateUrl: './main-overview.component.html',
   styleUrl: './main-overview.component.scss'
@@ -17,7 +21,9 @@ import {RouterLink} from "@angular/router";
 export class MainOverviewComponent {
 
   cards: ExploreItem[];
-  constructor(cardService: ExploreItemService) {
+  rewards: RewardItem[];
+  constructor(cardService: ExploreItemService, rewardService: RewardService) {
     this.cards = cardService.getLocalAttractions();
+    this.rewards = rewardService.getAll().slice(0, 5);
   }
 }

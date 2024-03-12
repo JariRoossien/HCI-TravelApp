@@ -19,8 +19,8 @@
       <p class="description-content">This user has not added a description yet.</p>
     </div>
     <div class="profile-list">
-      <a>
-        <div class="profile-list-entry">
+      <a [routerLink]="['visited']">
+        <div class="profile-list-entry" >
           <div class="icon">
             <img src="assets/search-svgrepo-com.svg" alt="search">
           </div>
@@ -32,10 +32,10 @@
           </div>
         </div>
       </a>
-      <a>
+      <a [routerLink]="['rewards']">
         <div class="profile-list-entry">
           <div class="icon">
-            <img src="assets/search-svgrepo-com.svg" alt="search">
+            <img src="assets/calendar-lines-svgrepo-com.svg" alt="search">
           </div>
           <div class="text">
             <p>Rewards</p>
@@ -45,26 +45,13 @@
           </div>
         </div>
       </a>
-      <a>
+      <a [routerLink]="['/bookmarks']">
         <div class="profile-list-entry">
           <div class="icon">
-            <img src="assets/search-svgrepo-com.svg" alt="search">
+            <img src="assets/bookmark-svgrepo-com.svg" alt="search">
           </div>
           <div class="text">
-            <p>Challenges</p>
-          </div>
-          <div class="click-icon">
-            <img src="assets/right-arrow-svgrepo-com.svg" alt="click arrow" width="80%">
-          </div>
-        </div>
-      </a>
-      <a>
-        <div class="profile-list-entry">
-          <div class="icon">
-            <img src="assets/search-svgrepo-com.svg" alt="search">
-          </div>
-          <div class="text">
-            <p>Something here</p>
+            <p>Bookmarked Items</p>
           </div>
           <div class="click-icon">
             <img src="assets/right-arrow-svgrepo-com.svg" alt="click arrow" width="80%">

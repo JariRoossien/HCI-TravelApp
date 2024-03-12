@@ -8,8 +8,13 @@ export class TravelUser {
   public headerPic: string = "https://a.cdn-hotels.com/gdcs/production177/d1333/8d921a0d-a457-4205-9687-669fa3607125.jpg";
   public creationDate: Date = new Date(2000, 8, 19);
 
+  public rewards: Map<number, number>;
+
   constructor() {
-    this.bookmarks.push(1);
+    this.visited.push(8);
+    this.bookmarks.push(5, 6);
+    this.rewards = new Map();
+    this.rewards.set(0, 1);
   }
 
   toggleBookmark(id: number): void {
@@ -34,6 +39,15 @@ export class TravelUser {
       return "1 token";
     }
     return this.credits + " tokens";
+  }
+
+  hasVisited(itemId: number): boolean {
+    return this.visited.indexOf(itemId) >= 0;
+  }
+
+  public addReward(rewardId: number): void {
+      let count = this.rewards.get(rewardId) || 0;
+      this.rewards.set(rewardId, count + 1);
   }
 
 }

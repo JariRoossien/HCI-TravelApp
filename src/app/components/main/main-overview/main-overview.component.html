@@ -1,6 +1,9 @@
 <div class="container">
 
   <div class="container-info">
+    <h2>TravelApp</h2>
+    <p>Excited to be in Amsterdam, but you don't know what to do? Join us in exploring the city!
+      Visit locations and get points while doing it! You can even unlock rewards to have some nice discounts!</p>
     <h2>Gamified Exploring</h2>
     <p>Explore area's, gain experience, and learn everything about the cities you're visiting!</p>
     <div class="carrousel">
@@ -14,7 +17,10 @@
     <h2>Unlock rewards</h2>
     <p>Want to get a nice discount at a restaurant, a free drink at the café outside your hotel or perhaps get cheaper tickets to the Zoo? Unlock rewards as you gain experience while travelling!</p>
     <div class="carrousel">
-      <h1>ADD REWARDS CARROUSEL</h1>
+      @for(item of rewards; track item) {
+        <app-reward-card [rewardCard]="item"></app-reward-card>
+      }
     </div>
+    <a [routerLink]="['/rewards']"><p>Unlock Rewards →</p></a>
   </div>
 </div>

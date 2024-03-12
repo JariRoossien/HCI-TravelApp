@@ -17,11 +17,28 @@
       </div>
     </div>
     <div class="item-list">
+      @if (this.isCompleted) {
+        <h2>Complete visit!</h2>
+        <p class="visit-info">Congratulations, you have completed the visit!</p>
+      }
+      @else if (this.user.hasVisited(this.itemId)) {
+        <h2>Complete visit!</h2>
+        <p class="visit-info">You have already unlocked the location!</p>
+      }
+      @else if (this.exploreItem.distance < 100) {
+        <h2>Complete visit!</h2>
+        <p class="visit-info">Well done! You made it to the location!</p>
+        <button (click)="completeVisit()">Complete your visit!</button>
+      }
       <p class="cont-header">Description</p>
       <div class="description">
         <p class="desc-content">{{this.exploreItem.description}}</p>
       </div>
-      <p class="cont-header">Directions</p>
+      @if (this.exploreItem.distance >= 100) {
+        <p class="cont-header">Directions</p>
+        <p class="dir-description">Open the map below to get the directions to this location!</p>
+        <img (click)="alert('Well done, but not implemented yet!');" src="assets/path_finding_google.png" alt="directions to {{this.exploreItem.title}}">
+      }
     </div>
   </div>
 

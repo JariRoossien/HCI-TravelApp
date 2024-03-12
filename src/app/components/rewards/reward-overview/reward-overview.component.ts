@@ -5,7 +5,7 @@ import {
 import {RewardListItemComponent} from "./reward-list-item/reward-list-item.component";
 import {RouterLink} from "@angular/router";
 import {RewardItem} from "../../../entity/reward-item";
-import {RewardService} from "../../../services/reward.service";
+import {RewardService} from "../../../services/rewards/reward.service";
 import {UserService} from "../../../services/user/user.service";
 import {TravelUser} from "../../../entity/travel-user";
 

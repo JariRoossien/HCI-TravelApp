@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="top-image">
+    <img src="assets/catalina-fedorova-RRl_m_fQzNY-unsplash.jpg" alt="">
+  </div>
+  <div class="container-info">
+    <h2>Saved Locations</h2>
+    <p>Go through your saved locations and get the directions!</p>
+  </div>
+  <div class="item-list">
+    @if(categoryItems.length == 0) {
+      <p>You haven't saved any locations yet! Go to Explore and find some exciting places to visit!</p>
+    } @else {
+      @for (card of categoryItems; track card) {
+        <app-explore-category-item [exploreCard]="card"></app-explore-category-item>
+      }
+    }
+  </div>
+</div>

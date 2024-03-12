@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, RouterLink} from "@angular/router";
 import {RewardItem} from "../../../entity/reward-item";
-import {RewardService} from "../../../services/reward.service";
+import {RewardService} from "../../../services/rewards/reward.service";
 import {TravelUser} from "../../../entity/travel-user";
 import {UserService} from "../../../services/user/user.service";
 
@@ -31,6 +31,7 @@ export class RewardDetailComponent implements OnInit {
   handlePurchase(): void {
     this.user.credits -= this.rewardItem.creditCost;
     this.purchased = true;
+    this.user.addReward(this.rewardId);
   }
 
   ngOnInit(): void {
