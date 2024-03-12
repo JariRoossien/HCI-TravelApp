@@ -2,7 +2,7 @@ export class TravelUser {
 
   public readonly bookmarks: number[] = [];
   public readonly visited: number[] = [];
-
+  public credits: number = 5;
   public name: string = "Jari Roossien";
   public profilePic: string = "https://www.botanopia.com/wp-content/uploads/2023/04/pexels-axp-photography-16429358-e1682515637490.jpg";
   public headerPic: string = "https://a.cdn-hotels.com/gdcs/production177/d1333/8d921a0d-a457-4205-9687-669fa3607125.jpg";
@@ -28,4 +28,12 @@ export class TravelUser {
   isBookmarked(id: number): boolean {
     return this.bookmarks.indexOf(id) >= 0;
   }
+
+  public getTokenString(): string {
+    if (this.credits == 1) {
+      return "1 token";
+    }
+    return this.credits + " tokens";
+  }
+
 }

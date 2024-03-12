@@ -1,0 +1,55 @@
+.container {
+  padding: 0;
+  a {
+    margin: 5px;
+    text-decoration: none;
+    color: black;
+  }
+
+  h2 {
+    margin-top: 15px;
+    margin-bottom: 5px;
+  }
+  p {
+    margin: 0;
+  }
+
+  .container-info {
+    box-shadow: 0 3px 9px 3px rgba(0, 0, 0, 0.05);
+    padding: 10px 5px 5px 5px;
+    a {
+      color: #626262;
+    }
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    z-index: 2;
+    position: relative;
+    margin-top: -10px;
+    background-color: white;
+
+    .token-info {
+      margin-top: 5px;
+      font-style: italic;
+      font-weight: 300;
+
+      strong {
+        font-weight: 600;
+      }
+    }
+  }
+
+  .item-list {
+    margin-top: 10px;
+  }
+
+  .top-image {
+
+    position: relative;
+    z-index: 1;
+    img {
+      width: 100%;
+      aspect-ratio: 16/8;
+      object-fit: cover;
+    }
+  }
+}

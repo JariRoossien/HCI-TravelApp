@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {UserService} from "../../../services/user/user.service";
+import {TravelUser} from "../../../entity/travel-user";
 
 @Component({
   selector: 'app-user-header',
@@ -9,4 +11,9 @@ import { Component } from '@angular/core';
 })
 export class UserHeaderComponent {
 
+  user: TravelUser;
+
+  constructor(uService: UserService) {
+    this.user = uService.travelUser;
+  }
 }

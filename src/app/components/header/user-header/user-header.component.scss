@@ -74,4 +74,26 @@
     color: #484848;
   }
 
+  .xp-info {
+    display: flex;
+    width: 100%;
+    margin-top: 5px;
+
+    .right-side {
+      width: 60%;
+      text-align: right;
+    }
+
+    .left-side {
+      font-weight: 700;
+      margin-left: 25px;
+      width: 40%;
+
+      p {
+        text-align: left;
+        font-weight: 700;
+        font-size: 16px;
+      }
+    }
+  }
 }

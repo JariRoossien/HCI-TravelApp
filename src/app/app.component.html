@@ -7,16 +7,22 @@
   </div>
   <div class="main-footer">
     <div class="button-row">
+      <a [routerLink]="['/home']">
+        <div class="button"  [routerLinkActive]="['routerActive']">
+          <img src="assets/compass-svgrepo-com.svg">
+          <p>Home</p>
+        </div>
+      </a>
       <a [routerLink]="['/explore']">
         <div class="button"  [routerLinkActive]="['routerActive']">
           <img src="assets/compass-svgrepo-com.svg">
           <p>Explore</p>
         </div>
       </a>
-      <a [routerLink]="['/calendar']">
+      <a [routerLink]="['/rewards']">
         <div class="button"  [routerLinkActive]="['routerActive']">
           <img src="assets/calendar-lines-svgrepo-com.svg">
-          <p>Calendar</p>
+          <p>Rewards</p>
         </div>
       </a>
       <a [routerLink]="['/saved']">

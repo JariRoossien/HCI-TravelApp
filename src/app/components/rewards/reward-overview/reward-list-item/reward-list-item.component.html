@@ -1,0 +1,13 @@
+<a [routerLink]="['/rewards', 'detail', rewardItem.id]">
+  <div class="c-attraction">
+    <div class="left-side">
+      <img src="{{rewardItem.imageUrl}}">
+    </div>
+    <div class="right-side">
+      <p class="reward-title">{{ rewardItem.title}}</p>
+      <p class="reward-description">{{rewardItem.description}}</p>
+      <p class="token-cost">{{rewardItem.getTokenString()}}</p>
+    </div>
+  </div>
+
+</a>

@@ -1,0 +1,48 @@
+.container {
+  margin: 5px;
+  .container-info {
+    h2 {
+      margin-bottom: 5px;
+      margin-top: 0;
+    }
+    p {
+      font-style: italic;
+      margin-top: 5px;
+    }
+
+    .carrousel {
+      display: flex;
+      overflow: hidden;
+      overflow-x: scroll;
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+
+      app-explore-card {
+        margin: 0 5px;
+      }
+
+    }
+    .carrousel::-webkit-scrollbar {
+      display: none;
+    }
+
+    a {
+      text-align: right;
+      width: 100%;
+      text-decoration: none;
+      color: #6c6c6c;
+      margin: 0 10px 0 0;
+
+      p {
+        margin-bottom: 0;
+      }
+    }
+
+  }
+
+  .container-info:first-child {
+    h2 {
+      margin-top: 10px;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="top-image">
+    <img src="assets/leif-niemczik-xQQShnDWY-Q-unsplash-min(1).jpg" alt="Rewards header">
+  </div>
+  <div class="container-info">
+<!--    <a [routerLink]="['/explore']">← Return to categories</a>-->
+    <h2>Rewards</h2>
+    <p>Some rewards here.</p>
+    <p class="token-info">You currently have <strong>{{user.getTokenString()}}</strong>.</p>
+  </div>
+  <div class="item-list">
+    @for (item of rewardItems; track item) {
+      <app-reward-list-item [rewardItem]="item"></app-reward-list-item>
+    }
+  </div>
+</div>

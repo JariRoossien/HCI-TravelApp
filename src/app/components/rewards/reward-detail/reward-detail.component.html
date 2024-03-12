@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="top-image">
+    <img src="{{this.rewardItem.imageUrl}}" alt="{{this.rewardItem.title}}">
+  </div>
+  <div class="container-header">
+    <div class="container-info">
+      <a [routerLink]="['/rewards']">← Return to Rewards</a>
+      <h2>{{this.rewardItem.title}}</h2>
+      <p>{{this.rewardItem.getTokenString() }}</p>
+    </div>
+  </div>
+  <div class="item-list">
+    <p class="cont-header">Description</p>
+    <div class="description">
+      <p class="desc-content">{{this.rewardItem.description}}</p>
+    </div>
+    <p class="cont-header">Directions</p>
+  </div>
+  <div class="purchase-container">
+    <h2>Purchase Now</h2>
+
+    @if (purchased) {
+      <button class="succesful" disabled>Purchased!</button>
+
+    } @else if (rewardItem.creditCost > user.credits) {
+      <button class="not-enough" disabled>Not enough credits...</button>
+    } @else {
+      <button (click)="handlePurchase()">Purchase now!</button>
+    }
+  </div>
+</div>
+
